@@ -1,0 +1,96 @@
+<!--
+    <h2>Listado heroes</h2>
+    <ol>
+    <li *ngFor="let heroe of heroes">
+        {{heroe}}
+    </li>
+--> 
+
+<!--
+<table border="1">
+    <thead>
+        <tr>
+            <th>id </th>
+            <th>nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios" >
+            <td> {{usuario.id}}</td>
+            <td>{{usuario.nombre}}</td>
+        </tr>
+    </tbody>
+</table>
+-->
+<!--<ng-container *ngFor="let color of colores">
+    <div>
+        {{color}}
+    </div>
+</ng-container>
+
+<ng-container *ngFor="let comida of comidas">
+    <div>
+        {{comida.id}}
+        {{comida.nombre}}
+    </div>
+</ng-container>
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./listado.component.css">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="row text-center mt-4">
+                <h2>Listado Componente con ngFor</h2>
+            </div>
+            <div class="col mb-3 mt-4">
+                <table class="table table-dark table-striped ">
+                    <thead>
+                        <tr class="text-center" >
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Memoria</th>
+                            <th>Procesador</th>
+                            <th>Disco Duro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center" *ngFor="let componente of componentes">
+                            <td>{{componente.nombre}}</td>
+                            <td>{{componente.marca}}</td>
+                            <td>{{componente.modelo}}</td>
+                            <td>{{componente.memoria}}</td>
+                            <td>{{componente.procesador}}</td>
+                            <td>{{componente.discoduro}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+            <div class="row text-center mt-4">
+                <h2>Mayoria de Edad con ngIf</h2>
+            </div>
+                <div *ngIf="mayorEdad (18)" >
+                    <h4><span class="badge bg-light text-dark mt-4 "> Eres Mayor de Edad </span></h4>
+                </div>
+                
+            
+                <div *ngIf="!mayorEdad (15)" >
+                    <h4><span class="badge bg-light text-dark mt-4 "> No Eres Mayor de Edad</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
+
+   
